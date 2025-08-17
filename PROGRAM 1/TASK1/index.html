@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Addition & Subtraction</title>
+    </head>
+<body>
+    <h2> Addition & Subtraction</h2>
+
+    <label>Number 1: </label>
+    <input id="num1" type="number" placeholder="Enter first number"><br><br>
+    
+    <label>Number 2: </label>
+    <input id="num2" type="number" placeholder="Enter second number"><br><br>
+
+    <button onclick="addNumbers()">Add</button>
+    <button onclick="subtractNumbers()">Subtract</button>
+
+    <p id="output"></p>
+</body>
+</html>
+
+
+<script>
+    function addNumbers() {
+    let n1 = Number(document.getElementById("num1").value);
+    let n2 = Number(document.getElementById("num2").value);
+    let sum = n1 + n2;
+    document.getElementById("output").innerHTML = `Addition: ${n1} + ${n2} = ${sum}`;
+}
+
+function subtractNumbers() {
+    let n1 = Number(document.getElementById("num1").value);
+    let n2 = Number(document.getElementById("num2").value);
+    let diff = n1 - n2;
+    document.getElementById("output").innerHTML = `Subtraction: ${n1} - ${n2} = ${diff}`;
+}
+</script>
