@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task 2: Data Types & Type Conversion</title>
+</head>
+<body>
+  <h1>Task 2: Data Types & Type Conversion</h1>
+  <p>Open the console (Press F12 → Console) to view outputs.</p>
+
+  <script>
+    
+    let age = 25;
+    console.log("Number:", age, "| Type:", typeof age);
+
+    
+    let name = "Kaniha";
+    console.log("String:", name, "| Type:", typeof name);
+
+    
+    let isStudent = true;
+    console.log("Boolean:", isStudent, "| Type:", typeof isStudent);
+
+    
+    let emptyValue = null;
+    console.log("Null:", emptyValue, "| Type:", typeof emptyValue); // type is 'object' (quirk in JS)
+
+
+    let notAssigned;
+    console.log("Undefined:", notAssigned, "| Type:", typeof notAssigned);
+
+  
+    let person = { name: "Javi", age: 21 };
+    console.log("Object:", person, "| Type:", typeof person);
+
+   
+    let uniqueId = Symbol("id");
+    console.log("Symbol:", uniqueId, "| Type:", typeof uniqueId);
+
+
+
+    console.log("\n=== Type Conversion Examples ===");
+
+    let num = 100;
+    let strNum = String(num);
+    console.log("Number to String:", strNum, "| Type:", typeof strNum);
+    let str = "123";
+    let numStr = Number(str);
+    console.log("String to Number:", numStr, "| Type:", typeof numStr);
+    console.log("Boolean('Hello'):", Boolean("Hello")); // true
+    console.log("Boolean(''):", Boolean(""));           // false
+    console.log("Boolean(0):", Boolean(0));             // false
+    console.log("Boolean(1):", Boolean(1));             // true
+    console.log("\n=== Implicit Conversions ===");
+    console.log("'5' + 3 =", '5' + 3);   // '53' (string concatenation)
+    console.log("'5' - 3 =", '5' - 3);   // 2   (string converted to number)
+    console.log("10 + true =", 10 + true); // 11 (true → 1)
+    console.log("10 + false =", 10 + false); // 10 (false → 0)
+    let price = "250";
+    let convertedPrice = Number(price);
+    console.log("Converted '250' to Number:", convertedPrice);
+
+    let score = 88;
+    let scoreString = score.toString();
+    console.log("Converted 88 to String:", scoreString);
+  </script>
+</body>
+</html>

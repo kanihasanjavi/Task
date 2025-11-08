@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Task 3: Callback Functions & Scopes</title>
+  <style>
+    body {
+      font-family: "Segoe UI", sans-serif;
+      background-color: #f4faf5;
+      color: #222;
+      margin: 40px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #2a7a43;
+    }
+
+    .section {
+      background-color: white;
+      border-radius: 12px;
+      padding: 20px;
+      margin: 20px auto;
+      max-width: 700px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    button {
+      background-color: #2a7a43;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    button:hover {
+      background-color: #256837;
+    }
+
+    p.output {
+      background-color: #eef6ee;
+      border-left: 5px solid #2a7a43;
+      padding: 10px;
+      font-family: monospace;
+      white-space: pre-line;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Task 3: Callback Functions & Scopes</h1>
+
+  <!-- ===== Callback Function Example ===== -->
+  <div class="section">
+    <h2>1️⃣ Callback Function Example</h2>
+    <p>This function simulates a task and calls a callback after completion.</p>
+    <button onclick="runCallbackExample()">Run Example</button>
+    <p id="callbackOutput" class="output"></p>
+  </div>
+
+  <!-- ===== Scope Demonstration ===== -->
+  <div class="section">
+    <h2>2️⃣ Scope Demonstration (Global, Local, Block)</h2>
+    <p>Demonstrates how <code>var</code>, <code>let</code>, and <code>const</code> differ in scope.</p>
+    <button onclick="runScopeExample()">Run Example</button>
+    <p id="scopeOutput" class="output"></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task 1: Conditional Statements Practice</title>
+  <style>
+    body {
+      font-family: "Segoe UI", sans-serif;
+      background-color: #f4f9f4;
+      color: #333;
+      margin: 40px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #2a7a43;
+    }
+
+    .section {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 20px;
+      margin: 20px auto;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      max-width: 600px;
+    }
+
+    button {
+      padding: 10px 15px;
+      background-color: #2a7a43;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    button:hover {
+      background-color: #256837;
+    }
+
+    p.output {
+      background-color: #eef6ee;
+      border-left: 5px solid #2a7a43;
+      padding: 10px;
+      font-weight: 500;
+      margin-top: 10px;
+      white-space: pre-line;
+    }
+  </style>
+</head>
+<body>
+  <h1>Task 1: Conditional Statements Practice</h1>
+
+  <div class="section">
+    <h2>1️⃣ Simple if Statement</h2>
+    <button onclick="simpleIf()">Run Example</button>
+    <p class="output" id="ifOutput"></p>
+  </div>
+
+  <div class="section">
+    <h2>2️⃣ if-else Statement</h2>
+    <button onclick="ifElseExample()">Run Example</button>
+    <p class="output" id="ifElseOutput"></p>
+  </div>
+
+  <div class="section">
+    <h2>3️⃣ else-if Ladder</h2>
+    <button onclick="elseIfExample()">Run Example</button>
+    <p class="output" id="elseIfOutput"></p>
+  </div>
+
+  <div class="section">
+    <h2>4️⃣ Switch Statement (Day of Week)</h2>
+    <input type="number" id="dayInput" min="1" max="7" placeholder="Enter number (1-7)">
+    <button onclick="switchExample()">Check Day</button>
+    <p class="output" id="switchOutput"></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

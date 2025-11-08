@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Employee Management System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Employee Management System</h1>
+
+  <!-- Add or Update Employee -->
+  <section class="card">
+    <h2>Add / Update Employee</h2>
+    <form id="employeeForm">
+      <input type="number" id="empId" placeholder="Employee ID" required />
+      <input type="text" id="empName" placeholder="Employee Name" required />
+      <input type="text" id="empPosition" placeholder="Position" required />
+      <input type="number" id="empSalary" placeholder="Salary" required />
+      <input type="text" id="empDept" placeholder="Department" required />
+      <select id="empAvailability">
+        <option value="true">Available</option>
+        <option value="false">Not Available</option>
+      </select>
+      <button type="submit">Add / Update Employee</button>
+    </form>
+  </section>
+
+  <!-- Buttons for All Requirements -->
+  <section class="card">
+    <h2>Actions</h2>
+    <div class="btn-group">
+      <button id="displayBtn">Display All Employees</button>
+      <button id="searchBtn">Search Employee</button>
+      <button id="removeBtn">Remove Employee (By ID)</button>
+      <button id="updateAvailBtn">Update Availability</button>
+      <button id="sortAsc">Sort by Salary ↑</button>
+      <button id="sortDesc">Sort by Salary ↓</button>
+      <button id="calcTotal">Total Salary (Available)</button>
+      <button id="deptReport">Department Report</button>
+    </div>
+  </section>
+
+  <!-- Employee List -->
+  <section id="employee-list" class="card" style="display:none;">
+    <h2>Employee List</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th><th>Name</th><th>Position</th><th>Salary</th><th>Department</th><th>Availability</th>
+        </tr>
+      </thead>
+      <tbody id="empTableBody"></tbody>
+    </table>
+  </section>
+
+  <!-- Output Section -->
+  <section id="output" class="card">
+    <h2>Output / Report</h2>
+    <pre id="outputArea"></pre>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
