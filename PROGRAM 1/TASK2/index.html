@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculator</title>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 50px;
+    background-color: #f8f9fa;
+}
+
+input {
+    padding: 8px;
+    margin: 5px;
+    font-size: 16px;
+    border: 1px solid #bbb;
+    border-radius: 5px;
+    background-color: #ffffff;
+}
+
+button {
+    padding: 8px 15px;
+    margin: 5px;
+    font-size: 16px;
+    background-color: #4da6ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #3399ff;
+}
+
+h2 {
+    font-size: 18px;
+    color: #2e3d49;
+}
+</style>
+</head>
+<body>
+    <div class="container">
+        <h2>Calculator</h2>
+        
+        <label for="num1">Number 1:</label>
+        <input type="number" id="num1" placeholder="Enter first number">
+
+        <label for="num2">Number 2:</label>
+        <input type="number" id="num2" placeholder="Enter second number">
+
+        <button onclick="calculate()">Calculate</button>
+
+        <div id="output" class="output-box"></div>
+    </div>
+
+<script>
+function calculate() {
+    let num1 = parseFloat(document.getElementById("num1").value);
+    let num2 = parseFloat(document.getElementById("num2").value);
+    let outputDiv = document.getElementById("output");
+
+    if (isNaN(num1) || isNaN(num2)) {
+        outputDiv.innerHTML = "<span class='error'>⚠ Please enter valid numbers!</span>";
+        outputDiv.classList.add("visible");
+        return;
+    }
+
+    let multiplication = num1 * num2;
+    let division = (num2 !== 0) ? (num1 / num2) : "<span class='error'>❌ Division by zero not allowed!</span>";
+
+    outputDiv.innerHTML = `
+        <div class='mul'>✖ ${num1} × ${num2} = ${multiplication}</div>
+        <div class='div'>➗ ${num1} ÷ ${num2} = ${division}</div>
+    `;
+    outputDiv.classList.add("visible");
+}
+</script>
+</body>
+</html>
